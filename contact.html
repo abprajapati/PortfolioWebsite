@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+
+<script>
+
+function display(){
+    document.querySelector("#keep").innerHTML="<br><br><input  placeholder='minimum 14 per hour' type='number' min=14>";
+   
+};
+  function hideFromUser(){
+    document.querySelector("#keep").innerHTML="<input type='hidden'>";
+};
+
+  </script>
+
+
+<style>
+ 
+#photorecord {
+  
+  border-style: groove;
+  height: 500px;
+  width: 90%;
+  background-color:#0000ff;
+  text-align: center;
+ 
+  margin-bottom: 20px;
+  margin-left: 65px;
+  margin-right: 30px;
+  padding-top: 50px;
+}
+
+#super{
+  margin-top: 40px;
+display: inline-block;
+}
+
+img {
+  border-radius: 50%;
+}
+
+button{
+  border-radius: 24px;
+}
+ 
+input[type=text], select, textarea {
+  width: 50%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 12px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+}
+
+.btn {
+  background-color: #2f0eec;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  height: 45px;
+  width: 90px;
+  border-radius: 12px;
+}
+
+#formrecord {
+  
+  border-style: groove;
+  background-color: rgb(150, 226, 150);
+  margin-left: 240px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  width: 70%;
+}
+
+</style>
+
+</head>
+<body >
+
+<div id="photorecord"><img src="Akashkumar.jpeg" height=230px width= 200px ></img>
+  <h2 style = "color : white; font-size: 30px;";>AKASHKUMAR PRAJAPATI</h2>
+  <h2 style="color:white">Web Developer</h2>
+  
+  <div id="super" ><button onclick= "window.location.href='resume.docx';"   style="height: 50px; width: 100px;" >Resume</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" style="height: 50px; width: 100px; background-color: black; color: white;" >Contact Me</button> </div>
+</div>
+
+
+ 
+  <h1 style="text-align: center;">Contact Me</h1>
+ <b><hr style="width: 30%; "></b> 
+   
+  <div id ="formrecord">
+    <form action="https://httpbin.org/post" method="POST">
+  
+      
+ <br><br>
+<center>
+      <table border = "1" width = "90%">
+        <br>
+        <tr>
+          <td style="padding-left: 20px;">Your Name</td>
+          <td style="padding-left: 20px;"><input type="text" name="firstname" placeholder="Enter " required></td>
+          
+        </tr>
+        <tr>
+          <td style="padding-left: 20px;">Email</td>
+          <td style="padding-left: 20px;"><input type="text"  name="emailaddress" placeholder="Enter your Email Address.." required></td>
+          
+        </tr>
+        <tr>
+          <td style="padding-left: 20px;">Address</td>
+          <td style="padding-left: 20px;"> <input type="text" name="address" placeholder="Enter your Address.."></td>
+          
+        </tr>
+        <tr>
+          <td style="padding-left: 20px;">City</td>
+          <td style="padding-left: 20px;">
+            
+            <input list="cities" id="cityname" name="city" placeholder="Enter your city">
+            <datalist id="cities">
+              <option value="Toronto">
+              <option value="Montreal">
+              <option value="Ottawa">
+              <option value="London">
+              <option value="Windsor">
+              <option value="Hamilton">
+              <option value="Edmonton">
+              <option value="Winnipeg">
+              <option value="Victoria"> 
+              <option value="Kingston"> 
+              <option value="Whitehorse">
+              <option value="Kichener"> 
+              <option value="Sherbrooke"> 
+              <option value="North Bay">
+              <option value="Sydney"> 
+              <option value="Pickering"> 
+              <option value="Nelson"> 
+              <option value="Vancouver">
+              <option value="Dawson City">
+              <option value="Lethbridge"> 
+              <option value="Red Deer">
+              <option value="Calgary" > 
+              <option value="Markham" > 
+            </datalist>
+          </td>
+          
+        </tr> <tr>
+          <td style="padding-left: 20px;">Postal Code</td>
+          <td style="padding-left: 20px;"><input type="text"  name="postalcode" placeholder="Enter your Postal Code.." pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required></td>
+          
+        </tr>
+        <tr>
+          <td style="padding-left: 20px;">Select Your Need</td>
+          <td style="padding-left: 20px;">
+            
+            <input type="radio" value="Question" name="radio" onclick=hideFromUser()>Question 
+            <input type="radio" value="Comment" name="radio" onclick = hideFromUser()> Comment   
+            <input type="radio" value="Hiring" name="radio" onclick=display()> Hiring 
+            <span id="keep"></span>
+          </td>
+          
+        </tr> <tr>
+          <td style="padding-left: 20px;">Add Massage</td>
+          <td style="padding-left: 20px;"><textarea name="subject" placeholder="Add Massage.."></textarea></td>
+          
+        </tr>
+ 
+      </table>
+</center>
+      <br><br>
+      <center><button class="btn" type="submit" name= "submit"value="submit"> Submit</button></center>
+    </form>
+  </div> 
+</body>
+</html> 
